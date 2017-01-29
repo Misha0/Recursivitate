@@ -38,7 +38,34 @@ if(a%10< m) return a%10;
   else 1+nrc(a/10);}
   
   //8.Prim
-  
+  int prim(int n, int d)
+  {if(d<=n/2)
+      if(n%d==0) return 0;
+      else return prim(n, d+1)
+   else return 1;}
+   
+   //9.Nr pare crescator
+   void par(int a, int b)
+   {if(a<=b)
+      if(a%2==0)
+      {cout<< a;
+      par(a+1,b)}
+      
+   //10.Nr pare descrescator
+    void pard(int a, int b)
+   {if(a<=b)
+      {dpar(a+1,b)
+      if(a%2==0)
+      cout<< a;
+     }
+     
+    //11.Suma valorilor Prime
+     int salvp(int n, int a[],int i)
+     {if(i<=n)
+          {if(prim(a[i],2))
+              return a[i]+salvp(n,a,i+1)
+          else return svalp(n,a,i+1)}
+      else return 0;}
   
   
   
